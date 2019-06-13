@@ -5,10 +5,13 @@ RUN apt-get update && apt-get install -y \
     wget \
     libpng-dev \
     zip \
-    unzip
+    unzip \
+    libicu-dev
 
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install mysqli
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
 
 RUN wget http://xdebug.org/files/xdebug-2.6.1.tgz \
     && tar -xvzf xdebug-2.6.1.tgz \
