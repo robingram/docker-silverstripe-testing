@@ -7,6 +7,7 @@ Installs libraries and PHP extensions:
 * libpng
 * gd
 * mysqli
+* intl
 
 And commands:
 
